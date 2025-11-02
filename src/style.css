@@ -1,0 +1,197 @@
+/* --- Navigation Bar --- */
+.navbar {
+  background-color: #20232a;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Assignment Title --- */
+.nav-title {
+  position: absolute;
+  left: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #61dafb;
+  white-space: nowrap;
+}
+
+.nav-buttons {
+  position: relative;
+  display: flex;
+  gap: 50px;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: #bbb;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding-bottom: 5px;
+}
+
+.nav-btn:hover {
+  color: #61dafb;
+}
+
+.nav-btn.active {
+  color: white;
+}
+
+.underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 50%;
+  background-color: #61dafb;
+  border-radius: 2px;
+  transition: transform 0.4s ease;
+}
+
+.underline.left {
+  transform: translateX(0%);
+}
+
+.underline.right {
+  transform: translateX(100%);
+}
+
+/* --- Main Content --- */
+.main-content {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  min-height: 90vh;
+}
+
+/* --- Tic Tac Toe Styles --- */
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  width: 60px;
+  height: 60px;
+  margin: 4px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  background: #fff;
+  border: 2px solid #61dafb;
+  transition: all 0.2s ease-in-out;
+}
+
+.square:hover {
+  background: #e0f7ff;
+}
+
+.status {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.game-info button {
+  margin: 5px;
+}
+
+/* --- User Lookup Styles --- */
+.content-container {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.lookup-box input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.lookup-box button {
+  margin-left: 10px;
+  padding: 8px 14px;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: black;
+  font-weight: 600;
+}
+
+.lookup-box button:hover {
+  background-color: #4fc3f7;
+}
+
+.loading {
+  color: #555;
+}
+
+.error {
+  color: red;
+}
+
+.user-card {
+  margin-top: 20px;
+  background: #f5faff;
+  border-left: 5px solid #61dafb;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: left;
+}
+
+/* --- Responsive Navbar (for smaller screens) --- */
+@media (max-width: 768px) {
+  .nav-buttons {
+    gap: 25px;
+  }
+
+  .nav-title {
+    font-size: 0.9rem;
+    left: 10px;
+  }
+
+  .square {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .content-container {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-buttons {
+    gap: 15px;
+  }
+
+  .nav-title {
+    font-size: 0.8rem;
+  }
+
+  .square {
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+  }
+}

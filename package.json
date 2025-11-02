@@ -2,6 +2,7 @@
   "name": "frontend-projects",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://drm2137.github.io/frontend-tic-tac-toe-gh-pages/",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
